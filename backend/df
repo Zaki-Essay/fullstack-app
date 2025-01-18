@@ -1,0 +1,6 @@
+# This is the commnad to run the docker container
+# docker build -t [user]/fullstack-backend:[version] -e MYSQL_ROOT_PASSWORD=hello -p 3306:3306
+# docker build -t azhar/fullstack-backend:1.0 .
+# docker run azhar/fullstack-backend:1.0 -e MYSQL_ROOT_PASSWORD=hello -p 3306:3306
+
+# docker build -t <your-image-name> .

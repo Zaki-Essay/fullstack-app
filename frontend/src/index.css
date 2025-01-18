@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-heading-styles {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.table-entry-styles {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.table-data-styles {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
