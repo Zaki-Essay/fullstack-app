@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 type UserTableTypes = {
-  id: Number;
-  name: String;
-  username: String;
-  email: String;
+  id: number;
+  name: string;
+  username: string;
+  email: string;
 };
 
 function UserTable() {
@@ -20,7 +20,7 @@ function UserTable() {
     setUserInfo(response.data);
   };
 
-  const deleteUser = async (id: Number) => {
+  const deleteUser = async (id: number) => {
     await axios.delete(`http://localhost:8080/user/${id}`);
     getAllUserInfo();
   };
