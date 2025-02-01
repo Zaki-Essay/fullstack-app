@@ -3,7 +3,7 @@ import UserTable from "../layout/table";
 function Home() {
   return (
     <>
-      <UserTable />
+        <UserTable />
     </>
   );
 }
