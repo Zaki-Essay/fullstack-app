@@ -5,10 +5,15 @@ import EditUser from "./users/edituser";
 import ViewUser from "./users/viewuser";
 import Header from "./layout/Header.tsx";
 import Footer from "./layout/Footer.tsx";
+import {QueryClientProvider, QueryClient} from "@tanstack/react-query";
 
 function App() {
+    const queryClient = new QueryClient()
   return (
+
     <>
+    <QueryClientProvider client={queryClient}>
+
       <Router>
         <Header />
         <Routes>
@@ -20,6 +25,7 @@ function App() {
 
       <Footer />
       </Router>
+    </QueryClientProvider>
     </>
   );
 }

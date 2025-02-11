@@ -50,7 +50,7 @@ const Table = <T extends object>({
                             {headers.map((header) => (
                                 <td
                                     key={header.key.toString()}
-                                    className={`text-center px-4 py-2 whitespace-nowrap text-left ${
+                                    className={`text-center px-4 py-2 whitespace-nowrap ${
                                         header.cellClassName || 'text-gray-700 dark:text-gray-200'
                                     }`}
                                 >

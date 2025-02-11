@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Table from "../components/Table.tsx";
 
-type UserTableTypes = {
+type Costumer = {
   id: number;
   name: string;
   username: string;
@@ -10,7 +11,7 @@ type UserTableTypes = {
 };
 
 function UserTable() {
-  const [userInfo, setUserInfo] = useState<UserTableTypes[]>([]);
+  const [userInfo, setUserInfo] = useState<Costumer[]>([]);
   useEffect(() => {
     getAllUserInfo();
   }, []);
@@ -28,6 +29,21 @@ function UserTable() {
   return (
     <>
       <div className="container flex justify-center items-center py-4 m-auto ">
+        <div className="flex items-center justify-center w-full">
+
+        <Table<Costumer>
+            headers={[
+              {key: 'id', label: 'Id'},
+              {key: 'name', label: 'Name'},
+              {key: 'username', label: 'Username'},
+              {key: 'email', label: 'Email'},
+            ]}
+            data={userInfo}
+
+        />
+        </div>
+
+
         <table className="shadow-md">
           <thead className="border-2 border-black">
             <tr>
